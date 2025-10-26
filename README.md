@@ -1,82 +1,198 @@
 <!-- # Rakesh_Pedapudi -->
-# Milestone 1: Data Preparation & Exploration
+PrognosAI – AI-Driven Predictive Maintenance System Using Time-Series Sensor Data
+Cohort: Infosys Springboard 6.0 – Rakesh Pedapudi
 
-**Project:** PrognosAI – AI-Driven Predictive Maintenance System Using Time-Series Sensor Data  
-**Cohort:** Infosys Springboard 6.0 – Rakesh Pedapudi
-
-## Overview
-
+Milestone 1: Data Preparation & Exploration
+Overview
 This milestone focuses on collecting, exploring, and preprocessing the sensor data required for predictive maintenance modeling.
 
-## Files Included
+Files Included
+milestone.py – Script to load, explore, and clean the sensor data
 
-- `milestone.py` – Python script to load, explore, and clean the sensor data.
-- `fd1_train_preprocessed.csv` – Raw/preprocessed training data containing time-series sensor readings and target values.
-- `fd1_test_preprocessed.csv` – Raw/preprocessed testing data.
-- `fd1_train_cleaned.csv` – Output: Cleaned training data (missing values removed).
-- `fd1_test_cleaned.csv` – Output: Cleaned testing data.
+fd1_train_preprocessed.csv – Raw/preprocessed training data
 
-## Data Columns
+fd1_test_preprocessed.csv – Raw/preprocessed testing data
 
-- `timestamp` – Date and time of measurement
-- `sensor_1`, `sensor_2`, `sensor_3` – Example sensor readings (numeric)
-- `target` – Equipment health status (0: healthy, 1: failure or needs maintenance)
+fd1_train_cleaned.csv – Cleaned training data (output)
 
-## Steps Performed
+fd1_test_cleaned.csv – Cleaned testing data (output)
 
-1. Loaded CSV sensor datasets using pandas.
-2. Explored data for structure, columns, and missing values.
-3. Cleaned the data by removing rows with null/missing values.
-4. Saved cleaned datasets for use in future milestones.
+Data Columns
+timestamp – Date and time of measurement
 
-## How to Run
+sensor_1, sensor_2, sensor_3 – Sensor readings (numeric)
 
-1. Place all CSV files and milestone.py in the same folder.
-2. In terminal, navigate to the folder and run:
-3. Review printed outputs and inspect cleaned CSV files.
+target – Equipment health status (0: healthy, 1: failure/maintenance)
 
-## Next Steps
+Steps Performed
+Loaded CSV sensor datasets using pandas
 
-- Feature engineering, data visualization, and building predictive models in upcoming milestones.
-# Milestone 2: Model Training & Performance Evaluation
+Explored data for structure, columns, and missing values
 
-**Project:** PrognosAI – AI-Driven Predictive Maintenance System Using Time-Series Sensor Data
+Cleaned the data by removing rows with null/missing values
 
-## Overview
+Saved cleaned datasets for use in future milestones
 
-This milestone covers training the predictive model and evaluating its performance on sensor time-series data.
+How to Run
+Place all CSV files and milestone.py in the same folder
 
-## Folder Structure
+Run: python milestone.py
 
-- `milestone2.py`: Trains the neural network model using cleaned sensor data. Saves the best model and training loss plot.
-- `evaluate.py`: Loads the trained model and scaler, evaluates predictions on test data, and generates performance plots.
-- `models/`: Saved trained models (e.g., `optimized_fd1.h5`).
-- `graphs_m2/`: Contains output plots such as training loss curve and predicted vs actual trends.
+Milestone 2: Model Training & Performance Evaluation
+Overview
+This milestone covers training the predictive model and evaluating performance on sensor time-series data.
 
-## Steps Performed
+Files & Folders
+milestone2.py: Trains the neural network using cleaned sensor data
 
-1. Loaded cleaned training and test datasets from Milestone 1.
-2. Built and trained a regression model to predict equipment health/remaining useful life.
-3. Saved the best-performing model.
-4. Evaluated model predictions and calculated performance metrics (e.g., MAE).
-5. Generated and saved evaluation plots.
+evaluate.py: Loads the trained model and evaluates on test data
 
-## How to Run
+models/: Trained model files (e.g., optimized_fd1.h5)
 
-1. Ensure you have cleaned CSV files from Milestone 1.
-2. Run:
-3. After training completes, run:
-4. Output files will be in `models/` and `graphs_m2/`.
+graphs_m2/: Training loss curve and predicted vs actual plots
 
-## Outputs
+Steps Performed
+Loaded cleaned train/test from Milestone 1
 
-- Trained model file (`optimized_fd1.h5`)
-- Loss curve (`loss_curve_fd1.png`)
-- Predicted vs Actual plot (`pred_vs_actual.png`)
-- MAE and other metrics displayed in the terminal
+Built and trained a regression model to predict equipment health/remaining useful life
 
-## Next Steps
+Saved the best-performing model
 
-Proceed to advanced analysis and reporting in Milestone 3 & 4.
+Evaluated predictions, calculated MAE and metrics
 
----
+Generated and saved evaluation plots
+
+How to Run
+Ensure cleaned CSV files from Milestone 1 are available
+
+Run:
+
+python milestone2.py
+
+python evaluate.py
+
+Milestone 3 & 4: Advanced Analysis & Alert System
+Overview
+These milestones focus on advanced model evaluation, creating performance/bias reports, and implementing an alerting system for early warning.
+
+Files & Folders
+milestone3.py: Advanced model/evaluation & bias analysis
+
+milestone4.py: Alert system and threshold notification
+
+graphs/: Residual plots, prediction trends, etc.
+
+models_m2/: Updated/optimized model files
+
+result/: Analysis reports, alert logs:
+
+alerts_fd1_milestone4.csv
+
+model_bias_analysis.csv
+
+model_performance.csv
+
+Steps Performed
+Residual analysis and error trend plotting
+
+Bias analysis across sensor ranges/conditions
+
+Threshold-based alert logic for predictions
+
+Generation of performance reports and logs
+
+How to Run
+Run:
+
+python milestone3.py
+
+python milestone4.py
+
+Milestone 5: Interactive Dashboard & Deployment
+Overview
+Developed a real-time interactive dashboard using Streamlit to visualize predictions, historical data, and manage alerts.
+
+Files/Folders
+dashboard.py – Runs the Streamlit dashboard app
+
+milestone5.py – Prediction engine/data processor for dashboard
+
+future_test_data.csv – Example/test input for predictions
+
+Milestone5_predictions.csv – Output results file
+
+requirements.txt – All dependencies listed for easy setup
+
+Screenshot1.png, Screenshot2.png – Dashboard images
+
+Features
+Real-time data upload, prediction, and alerting
+
+Multiple visualizations for sensor trends, prediction vs actual, and error analysis
+
+Download and view detailed predictions and performance logs
+
+How to Run
+text
+pip install -r requirements.txt
+streamlit run dashboard.py
+Project Structure Summary
+text
+Milestone - 01/
+    milestone.py
+    fd1_train_preprocessed.csv
+    fd1_test_preprocessed.csv
+    fd1_train_cleaned.csv
+    fd1_test_cleaned.csv
+
+Milestone - 02/
+    milestone2.py
+    evaluate.py
+    models/
+        optimized_fd1.h5
+    graphs_m2/
+        loss_curve_fd1.png
+        pred_vs_actual.png
+
+Milestone - 03 & 04/
+    milestone3.py
+    milestone4.py
+    graphs/
+        fd1_predicted_vs_actual.png
+        fd1_residual_distribution.png
+        fd1_residual_trend.png
+    models_m2/
+        optimized_fd1.h5
+    result/
+        alerts_fd1_milestone4.csv
+        model_bias_analysis.csv
+        model_performance.csv
+
+Milestone - 05/
+    dashboard.py
+    milestone5.py
+    future_test_data.csv
+    Milestone5_predictions.csv
+    requirements.txt
+    Screenshot1.png
+    Screenshot2.png
+Requirements
+All milestones use Python 3.8+ and these main libraries:
+
+pandas
+
+numpy
+
+tensorflow / keras
+
+scikit-learn
+
+matplotlib
+
+streamlit
+
+See Milestone - 05/requirements.txt for exact pip versions.
+
+Contact
+Project by Rakesh Pedapudi
+Infosys Springboard 6.0
