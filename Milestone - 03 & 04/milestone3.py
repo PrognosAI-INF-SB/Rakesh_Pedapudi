@@ -19,7 +19,6 @@ try:
 except Exception:
     pass
 
-
 model = load_model('models_m2/optimized_fd1.h5', compile=False)
 
 
