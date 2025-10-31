@@ -2,7 +2,6 @@
 
 **Cohort:** Infosys Springboard 6.0  
 **Contributor:** Rakesh Pedapudi  
-
 ---
 
 ## 🧩 Milestone 1: Data Preparation & Exploration
